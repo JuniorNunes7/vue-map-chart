@@ -4,7 +4,7 @@
     <div
       v-if="legend.name"
       class="vue-map-legend"
-      :style="'left:' + position.left + 'px; top: ' + position.top + 'px'"
+      :style="'left: 10px; bottom: 10px'"
     >
       <div class="vue-map-legend-header">
         <span>{{legend.name}}</span>
