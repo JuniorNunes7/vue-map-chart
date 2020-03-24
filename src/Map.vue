@@ -38,12 +38,14 @@
 
 			Array.from(paths).forEach(path => {
 				path.addEventListener('mouseenter', (e) => {
+					const left = e.offsetX + (e.offsetX < 200 ? 790 : 500);
+
 					_this.$emit(
 						'hoverCountry', {
 							"code": e.target.id,
 							"name": e.target.attributes.title.value,
 							"position": {
-								"left": e.offsetX+500,
+								"left": left,
 								"top": e.offsetY
 							}
 						}

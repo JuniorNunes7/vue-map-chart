@@ -133,7 +133,6 @@ export default {
     renderMapCSS() {
       const baseCss = getBaseCss(this.$props);
       const data = _.mapValues(this.$props.countryData, (x) => {
-        console.log(x)
         return (typeof x === 'object') ? x[0] : x
       });
       const dynamicMapCss = getDynamicMapCss(
@@ -181,7 +180,7 @@ export default {
 }
 
 .vue-map-legend-content span {
-  display: inline-block;
+  display: block!important;
   text-align: left!important;
 }
 </style>
